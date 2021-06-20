@@ -1,0 +1,108 @@
+body {
+    font: 14px "Century Gothic", Futura, sans-serif;
+    margin: 20px;
+}
+
+ol,
+ul {
+    padding-left: 30px;
+}
+
+ol li {
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+ol li button {
+    border-radius: 2px;
+}
+
+.board-row:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.status {
+    margin-bottom: 10px;
+}
+
+.square {
+    background: rgb(248, 253, 248);
+    border: 3px solid black;
+    float: left;
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 50px;
+    height: 5rem;
+    /* margin-right: -1px;
+    margin-top: -1px; */
+    padding: 0;
+    text-align: center;
+    width: 5rem;
+}
+
+.square:focus {
+    outline: none;
+}
+
+.kbd-navigation .square:focus {
+    background: #ddd;
+}
+
+.game-board {
+    /* display: flex;
+    flex-direction: row; */
+    /* display: block; */
+    margin: auto;
+    margin-top: 5rem;
+    width: 15rem;
+}
+
+.game-info {
+    margin-left: 2rem;
+}
+
+button {
+    /* background: #1aab8a; */
+    background: #19b893;
+    color: rgb(26, 24, 24);
+    border: none;
+    position: relative;
+    height: 40px;
+    font-size: 1rem;
+    padding: 0 2em;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
+}
+
+button:hover {
+    background: #fff;
+    color: #1aab8a;
+}
+
+button:before,
+button:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: #1aab8a;
+    transition: 400ms ease all;
+}
+
+button:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+button:hover:before,
+button:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+}
